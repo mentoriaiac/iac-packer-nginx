@@ -1,0 +1,3 @@
+- src: https://github.com/mentoriaiac/iac_role_nginx.git
+  scm: git
+  version: main
