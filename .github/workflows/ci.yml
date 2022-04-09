@@ -22,4 +22,4 @@ jobs:
         with:
           command: validate
           arguments: -syntax-only
-          target: packer.pkr.hcl
+          target: packer/packer.pkr.hcl

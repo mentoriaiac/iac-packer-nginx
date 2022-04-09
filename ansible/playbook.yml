@@ -1,0 +1,7 @@
+---
+- name: hello world
+  hosts: default
+  become: true
+
+  roles:
+    - iac_role_nginx

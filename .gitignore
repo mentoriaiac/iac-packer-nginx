@@ -9,3 +9,6 @@ crash.log
 
 # Remote Template Makefile
 packer.inc
+
+.venv
+venv
