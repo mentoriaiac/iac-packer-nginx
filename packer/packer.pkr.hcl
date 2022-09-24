@@ -21,6 +21,11 @@ build {
     galaxy_force_install   = true
     galaxy_force_with_deps = true
     user                   = "packer"
-    ansible_ssh_extra_args = ["-oPubkeyAcceptedKeyTypes=+ssh-rsa", " -oHostKeyAlgorithms=+ssh-rsa"]
+    ansible_env_vars = [
+      "ANSIBLE_REMOTE_TMP=/tmp/.ansible/tmp",
+      "ANSIBLE_SSH_ARGS='-oHostKeyAlgorithms=+ssh-rsa -oPubkeyAcceptedKeyTypes=ssh-rsa'",
+      "ANSIBLE_HOST_KEY_CHECKING=False"
+    ]
+    #ansible_ssh_extra_args = ["-oPubkeyAcceptedKeyTypes=+ssh-rsa", " -oHostKeyAlgorithms=+ssh-rsa"]
   }
 }
