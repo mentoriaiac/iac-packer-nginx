@@ -1,7 +1,11 @@
 ---
-- name: hello world
+- name: "load balancer"
   hosts: default
   become: true
-
   roles:
-    - iac_role_nginx
+    - role: iac_role_nginx
+      vars:
+        nginx_version: 1.18.0-0ubuntu1.4
+        nginx_extra_files:
+          - filename: nginx_extra_conf/nomad.conf
+            destination: /etc/nginx/conf.d/nomad.conf
